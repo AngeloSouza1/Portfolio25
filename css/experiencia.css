@@ -1,0 +1,117 @@
+
+
+/* Estilo da Seção Experiências */
+.section-experiences {
+    display: flex;
+    flex-direction: column; /* Organiza em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente, se necessário */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 50px; /* Ajuste a margem superior conforme necessário */
+    border-radius: 10px; /* Cantos arredondados */
+}
+
+.experience-container {
+    display: flex; /* Utiliza flexbox */
+    justify-content: space-between; /* Espaça os itens */
+    align-items: flex-start; /* Alinha os itens no topo */
+    margin-top: 40px; /* Espaço acima da seção */
+}
+
+
+.section-title {
+    font-size: 2.5rem; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    text-align: center; /* Centraliza o título */
+    font-family: 'Didact Gothic', sans-serif; /* Estilo da fonte */
+    text-align center; /* Centraliza o texto */
+
+}
+
+.home-title {
+    font-family: 'Didact Gothic', sans-serif; /* Estilo da fonte */
+    font-size: 2.5rem; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    transition: color 0.3s ease; /* Efeito suave na cor */
+    margin-top: 190px;
+    text-align: center; /* Centraliza o texto */
+
+}
+
+.section-experiences .home-title {
+    margin-top: 130px; /* Ajuste este valor conforme necessário para subir o título */
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column; /* Alinha as experiências em coluna */
+    gap: 20px; /* Espaço entre as experiências */
+    max-width: 800px; /* Limita a largura da lista */
+    margin: 0 auto; /* Centraliza a lista */
+}
+
+.experience-item {
+    width: 300px; /* Define uma largura fixa para os itens */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo levemente transparente */
+    border: 0.4px solid transparent; /* Borda transparente inicialmente */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Suaviza a transformação e a cor de fundo */
+    width: 45%; /* Define uma largura para os itens */
+    color: #7c7c7c; /* Altere a cor do texto para o que desejar */
+
+}
+
+
+.experience-details {
+    display: flex; /* Habilita o layout flex */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaçamento entre os itens */
+    margin-top: 10px; /* Espaço acima dos detalhes da experiência */
+
+}
+
+.experience-item.left {
+   margin-left: 30px;
+    align-self: flex-start; /* Alinha à esquerda */
+    background-color: rgba(255, 255, 255, 0.056); /* Fundo semi-transparente */
+}
+
+.experience-item.right {
+    align-self: flex-end; /* Alinha à direita */
+    margin-top: 220px; /* Ajuste conforme necessário */
+    margin-bottom: 40px; /* Ajuste conforme necessário */
+    background-color: rgba(255, 255, 255, 0.056); /* Fundo semi-transparente */
+    margin-right: 35px;
+}
+
+.experience-item h3 {
+    font-size: 1.8rem; /* Tamanho do título da experiência */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+.experience-item p {
+    font-size: 1rem; /* Tamanho do texto da descrição */
+    margin: 5px 0; /* Espaçamento entre parágrafos */
+}
+
+
+/* Efeito ao passar o mouse */
+.experience-item:hover {
+    transform: scale(1.05); /* Aumenta o item em 5% */
+    border-color: #f1f1f1; /* Define a cor da borda ao passar o mouse */
+    color: rgb(246, 248, 250); /* Altere a cor do texto para o que desejar */
+    background-color: rgba(37, 4, 4, 0.2); /* Adiciona um fundo suave ao passar o mouse */
+    transition: color 0.9s ease, transform 0.9s ease,  background-color 0.9s ease; /* Efeitos suaves nas propriedades */
+}
+
+#scroll-indicator-experience {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza as setas em coluna */
+    margin-top: 30px; /* Aumente este valor para descer mais a seção */
+}

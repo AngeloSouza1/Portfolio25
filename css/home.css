@@ -1,0 +1,132 @@
+/* Seção Home */
+
+
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    height: 90vh;
+    padding: 20px; /* Adiciona espaço ao redor da seção */
+    background-color: #0a0f2c; /* Fundo da seção */
+    position: relative; /* Permite posicionar elementos relativos à seção */
+}
+
+/* Título da seção */
+.home-title {
+    font-family: 'Poppins', sans-serif; /* Altera para Poppins */
+    /*font-family: 'Didact Gothic', sans-serif;  Estilo da fonte */
+    font-size: 2.5rem; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    transition: color 0.3s ease; /* Efeito suave na cor */
+    text-align: left; /* Alinha o título à esquerda */
+    margin-left: -30px; 
+    margin-top: -5px;
+}
+
+/* Efeito hover no título */
+.home-title:hover {
+    color: #56ccf2; /* Muda a cor ao passar o mouse */
+}
+
+/* Contêiner da seção */
+.home-content {
+    display: flex;
+    flex-direction: column; /* Coloca o título acima do conteúdo */
+    align-items: center; /* Centraliza todos os itens ao centro */
+}
+
+/* Detalhes da seção */
+.home-details {
+    display: flex;
+    flex-direction: row; /* Alinha a imagem e descrição lado a lado */
+    align-items: flex-start; /* Alinha a imagem e descrição no topo */
+    gap: 110px; /* Espaço entre a imagem e a descrição */
+    margin-top: 20px; /* Espaço acima da seção */
+}
+
+/* Imagem do perfil */
+.profile-image {
+    width: 350px; /* Tamanho da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%; /* Arredonda a imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.389); /* Sombra para dar destaque */
+    transition: transform 0.5s ease; /* Suave aumento ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse na imagem */
+.profile-image:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente a imagem */
+}
+
+/* Descrição da seção */
+.home-description {
+    color: #7c7c7c; /* Cor escura para a descrição */
+    max-width: 700px; /* Limita a largura da descrição */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 20px; /* Espaçamento interno */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: justify; /* Justifica o texto */
+    margin-bottom: 1rem; /* Espaço abaixo de cada parágrafo */
+    animation: border-glow 3s ease-in-out infinite; /* Animação contínua */
+}
+
+.logo {
+    margin-left: 10px; /* Ajuste o valor conforme necessário para o deslocamento desejado */
+    font-size: 1.3rem
+}
+
+
+/* Efeito de brilho na borda */
+@keyframes border-glow {
+    0% {
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+    }
+    50% {
+        border-color: #56ccf2;
+        box-shadow: 0 0 10px rgba(86, 204, 242, 0.5);
+    }
+    100% {
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+    }
+}
+
+/* Efeito de animação para a seção Home */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efeito de hover na descrição */
+.home-description p {
+    transition: color 0.3s ease; /* Efeito suave na cor do texto */
+}
+
+.home-description p:hover {
+    color: #f1f1f1; /* Muda a cor ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .profile-image {
+        width: 250px; /* Ajusta o tamanho da imagem para dispositivos menores */
+    }
+
+    .home-title {
+        font-size: 2rem; /* Reduz o tamanho da fonte do título */
+    }
+
+    .home-description {
+        max-width: 100%; /* Limita a largura para dispositivos pequenos */
+    }
+}

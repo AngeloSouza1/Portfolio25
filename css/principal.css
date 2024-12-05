@@ -1,0 +1,408 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Adiciona rolagem suave */
+}
+
+
+body {
+        
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0f2c; /* Fundo azul escuro */
+    color: #fff;
+    line-height: 1.6;
+    height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Logo backSouza com gradiente */
+.logo {
+    font-size: 18px; /* Tamanho do logo */
+    font-weight: bold;
+    background: linear-gradient(90deg, #56ccf2, #2f80ed); /* Gradiente no texto */
+    -webkit-background-clip: text;
+    color: transparent; /* Torna o texto transparente para exibir o gradiente */
+}
+
+
+/* Cabeçalho com borda escura e fundo transparente */
+header {
+    position: fixed;
+    width: 80%;
+    padding: 0.3rem;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(50, 50, 50, 0.8); /* Borda escura */
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Seção de introdução */
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #0a0f2c;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: -150px; /* Subir a seção de introdução */
+}
+
+#intro .intro-content {
+    max-width: 800px;
+    color: #fff;
+}
+
+/* Título "Olá, seja bem-vindo!" com a fonte Didact Gothic */
+#intro h1 {
+    font-family: 'Didact Gothic', sans-serif; /* Fonte Didact Gothic */
+    font-size: 1.6rem; /* Reduzido para o tamanho do texto anterior */
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    padding: 0;
+    line-height: 1; /* Remove os espaços entre as linhas */
+}
+
+/* Título "Eu sou Desenvolvedor." com a fonte Poppins */
+#intro h2 {
+    font-family: 'Poppins', sans-serif; /* Fonte Poppins */
+    font-size: 4rem;
+    margin: 0.2rem 0; /* Reduzi o espaço entre as frases */
+    font-weight: bold;
+    line-height: 1; /* Remove os espaços entre as linhas */
+}
+
+#intro h2 .highlight {
+    background: linear-gradient(90deg, #56ccf2, #2f80ed);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Ajustes do texto abaixo */
+#intro p {
+    font-size: 1rem; /* Diminui o tamanho da fonte */
+    font-weight: normal; /* Remove o negrito */
+    margin: 0.5rem 0; /* Reduzi o espaçamento entre o parágrafo */
+    color: #b3b3b3;
+}
+
+/* Efeito discreto para 'Baixar Currículo' */
+#intro .btn-download {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent; /* Remove fundo */
+    position: relative;
+    display: inline-block;
+    letter-spacing: 2px; /* Espaçamento sutil entre letras */
+    padding: 2rem 4rem; /* Aumenta o padding para dar mais destaque */
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+#intro .btn-download:hover {
+    color: #56ccf2; /* Muda a cor no hover */
+    text-shadow: 0 0 5px #56ccf2, 0 0 10px #2f80ed; /* Efeito de brilho ao passar o mouse */
+}
+
+/* Adiciona uma seta com movimento */
+#intro .btn-download::after {
+    content: '↓'; /* Adiciona uma seta */
+    font-size: 1.5rem;
+    margin-left: 10px;
+    color: #fff;
+    position: relative;
+    transition: transform 0.3s ease; /* Suave ao passar o mouse */
+}
+
+#intro .btn-download:hover::after {
+    transform: translateY(-5px); /* Movimenta a seta suavemente para cima no hover */
+}
+
+.link-hover {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse no link */
+.link-hover::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -6px; /* Ajuste este valor para mover a linha mais perto do texto */
+    left: 0;
+    background-color: #ffffff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.link-hover:hover {
+    color: #ffffff; /* Destaca o texto ao passar o mouse */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Leve efeito de brilho no texto */
+}
+
+.link-hover:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Efeito intermitente mais lento */
+@keyframes blink {
+    0% {
+        color: #fff;
+    }
+    100% {
+        color: #56ccf2;
+    }
+}
+
+/* Efeito de subir ao carregar a página */
+@keyframes slide-up {
+    0% {
+        transform: translateY(20px);
+        opacity: 0; /* Começa invisível */
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1; /* Fica visível */
+    }
+}
+
+#languages {
+    position: relative; /* Permite que o contêiner tenha um contexto para a animação */
+    overflow: hidden; /* Esconde o excesso de itens que saem da área visível */
+    height: 100px; /* Altura do contêiner */
+    background-color: #0a0f2c; /* Cor de fundo da seção */
+}
+
+.language-container {
+    display: flex; /* Usa flexbox para alinhar os itens lado a lado */
+    animation: slide 70s linear infinite; /* Animação contínua */
+}
+
+
+.language-container.reverse {
+    animation: slide-reverse 70s linear infinite; /* Animação reversa */
+}
+
+#languages {
+    position: relative;
+    height: 100px; /* Altura do contêiner */
+    background-color: #0a0f2c; /* Cor de fundo da seção */
+    padding-top: 2px; /* Adiciona espaço acima para elevar a seção */
+    padding-bottom: 20px; /* Espaço inferior opcional para a estética */
+    margin-top: -220px; /* Ajuste a margem superior para subir a seção */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do contêiner */
+}
+
+.language-wrapper {
+    width: 80%; /* Largura do contêiner central */
+    margin: 0 auto; /* Centraliza o contêiner */
+    overflow: hidden; /* Esconde itens que saem das bordas */
+    position: relative;
+    margin-bottom: 20px; /* Adiciona espaço entre as seções */
+}
+
+.language-item:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do item ao passar o mouse */
+}
+
+.language-item:hover .language-name {
+    transform: scale(1.1); /* Aumenta o tamanho do nome ao passar o mouse */
+}
+
+.language-item {
+    display: flex;
+    align-items: center;
+    margin: 0 20px; /* Espaçamento entre os itens */
+}
+
+.language-icon {
+    width: 25px; /* Tamanho do ícone */
+    height: auto; /* Mantém a proporção do ícone */
+    margin-right: 5px; /* Espaço entre o ícone e o nome */
+}
+
+/* Ajustes para o nome da linguagem */
+.language-name {
+    font-size: 16px; /* Tamanho da fonte do nome */
+    color: #fff; /* Cor do nome */
+    font-family: 'Poppins', sans-serif; /* Fonte do nome */
+    font-weight: normal; /* Remove o negrito */
+    transition: transform 0.3s ease; /* Transição suave para o nome */
+}
+
+/* Animação para mover os itens da direita para a esquerda */
+@keyframes slide {
+    0% {
+        transform: translateX(100%); /* Começa da direita */
+    }
+    100% {
+        transform: translateX(-160%); /* Move para a esquerda */
+    }
+}
+
+
+@keyframes slide-reverse {
+    0% {
+        transform: translateX(-160%); /* Começa fora da tela à esquerda */
+    }
+    100% {
+        transform: translateX(100%); /* Move para a direita */
+    }
+}
+
+
+/* Animação de subida ao carregar a página */
+.animate-up {
+    opacity: 0; /* Começa invisível */
+    transform: translateY(20px); /* Move para baixo */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animação suave */
+}
+
+.animate-up.visible {
+    opacity: 1; /* Torna visível */
+    transform: translateY(0); /* Move para a posição original */
+}
+
+
+
+#scroll-indicator {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza as setas em coluna */
+    margin-top: 180px; /* Aumente este valor para descer mais a seção */
+}
+
+
+#scroll-indicator-home {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza as setas em coluna */
+    margin-top: -20px; /* Aumente este valor para descer mais a seção */
+
+}
+
+
+#scroll-indicator-project {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza as setas em coluna */
+    margin-top: -25px; /* Ajuste conforme necessário para descer mais a seção */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura da tela */
+    position: relative; /* Para posicionamento adequado, se necessário */
+
+}
+
+
+.arrow-wrapper {
+    display: flex;
+    flex-direction: column; /* Alinha as setas verticalmente */
+    gap: 10px; /* Espaço entre as setas */
+}
+
+.arrow-icon {
+    width: 50px; /* Ajuste o tamanho do ícone conforme necessário */
+    animation: bounce 1s infinite; /* Animação de movimento */
+}
+
+/* Animação de bounce */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px); /* Move para cima */
+    }
+    60% {
+        transform: translateY(-5px); /* Leve movimento de volta */
+    }
+}
+
+html {
+    scroll-behavior: smooth; /* Adiciona rolagem suave */
+}
+
+/* Estilos de Responsividade */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu li {
+        margin: 5px 0; /* Espaço entre os itens do menu */
+    }
+
+    .intro-content, .home-content {
+        padding: 20px; /* Reduzir o padding */
+    }
+
+    .language-container {
+        flex-direction: column; /* Muda para coluna em telas menores */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .language-item {
+        margin: 10px 0; /* Espaço entre os itens */
+    }
+
+    .experience-item {
+        width: 100%; /* Adapta a largura dos itens de experiência */
+        margin: 10px 0; /* Adiciona espaçamento */
+    }
+}
+
+/* Estilos para Mobile */
+@media (max-width: 480px) {
+    .nav-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-download {
+        font-size: 1rem; /* Reduz o tamanho do botão */
+        padding: 10px 20px; /* Ajuste do padding */
+    }
+
+    .home-title {
+        font-size: 2rem; /* Reduzir tamanho da fonte */
+    }
+
+    .home-description {
+        font-size: 0.9rem; /* Ajustar tamanho da descrição */
+    }
+
+    .project {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte dos projetos */
+    }
+}
+
+
+
+

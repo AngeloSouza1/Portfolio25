@@ -1,0 +1,65 @@
+/* Centraliza o logo, menu e ícones */
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 10px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s, opacity 0.3s;
+}
+
+/* Efeito hover no menu */
+.nav-menu li a:hover {
+    color: white;
+}
+
+.nav-menu:hover li a {
+    opacity: 0.5;
+}
+
+.nav-menu li:hover a {
+    opacity: 1;
+}
+
+/* Social Icons com gradiente */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.social-icons a {
+    font-size: 18px;
+    background: linear-gradient(90deg, #56ccf2, #2f80ed); /* Gradiente aplicado nos ícones */
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: transform 0.3s, color 0.3s, opacity 0.3s;
+}
+
+.social-icons:hover a {
+    opacity: 0.5;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    color: white;
+}

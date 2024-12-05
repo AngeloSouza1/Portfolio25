@@ -1,0 +1,199 @@
+/* Seção Projetos */
+#projects {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.home-title {
+    font-family: 'Didact Gothic', sans-serif; /* Estilo da fonte */
+    font-size: 2.5rem; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    text-align: center; /* Centraliza o texto */
+    transition: color 0.3s ease; /* Efeito suave na cor */
+    margin-top: 80px; /* Espaço acima do título */
+}
+
+/* Estilo dos Projetos */
+.project {
+    padding: 2rem; /* Aumenta o padding para mais espaço interno */
+    margin: 1rem;
+    border-radius: 10px; /* Bordas arredondadas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de aumento ao passar o mouse */
+.project:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do projeto */
+}
+
+.project h3 {
+    color: #fff; /* Cor do título */
+    font-size: 1.8rem; /* Tamanho do título */
+}
+
+.project p {
+    color: #f1f1f1; /* Cor do texto */
+    font-size: 1.1rem; /* Tamanho do texto */
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    background-color: transparent; /* Retira o fundo colorido */
+    color: #3498db; /* Cor do ícone */
+    font-size: 40px; /* Tamanho do ícone */
+    transition: transform 0.3s; /* Transição suave para o ícone */
+}
+
+.project a:hover {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+}
+
+/* Estilo do Carrossel */
+.carousel {
+    position: relative; /* Necessário para os controles */
+    width: 100%; /* Largura total */
+    max-width: 900px; /* Aumente a largura máxima do carrossel */
+    margin: 0 auto; /* Centraliza o carrossel */
+    overflow: hidden; /* Esconde o excesso */
+    margin-top: 120px; /* Margem superior */
+}
+
+/* Exibir setas apenas quando o mouse estiver sobre o carrossel */
+.carousel:hover .carousel-control {
+    opacity: 1; /* Mostra as setas ao passar o mouse */
+}
+
+.carousel-inner {
+    display: flex; /* Alinha os itens em linha */
+    transition: transform 1.5s ease; /* Transição suave */
+}
+
+.carousel-item {
+    min-width: 100%; /* Cada item ocupa toda a largura do carrossel */
+    box-sizing: border-box; /* Inclui padding e border na largura */
+    padding: 1.5rem; /* Espaçamento interno dos itens */
+    transition: transform 1.5s ease; /* Transição suave para o item do carrossel */
+}
+
+/* Efeito de destaque no carrossel */
+.carousel-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao item */
+}
+
+/* Botões de Controle do Carrossel */
+.carousel-control {
+    position: absolute; /* Posiciona os botões */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta a posição verticalmente */
+    background-color: transparent; /* Fundo transparente */
+    color: #4c69de; /* Cor dos ícones */
+    border: none; /* Remove bordas */
+    padding: 15px; /* Aumenta o tamanho do botão */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-size: 40px; /* Tamanho do botão */
+    z-index: 2; /* Para ficar acima dos projetos */
+    transition: transform 0.3s; /* Efeito suave nas transições */
+    opacity: 0; /* Inicia invisível */
+}
+
+/* Posições dos botões fora do conteúdo */
+.prev {
+    left: 20px; /* Posição à esquerda */
+}
+
+.next {
+    right: 20px; /* Posição à direita */
+}
+
+/* Efeito ao passar o mouse nos botões */
+.carousel-control:hover {
+    transform: translateX(5px); /* Move a seta para a direita ao passar o mouse */
+}
+
+/* Cor do ícone */
+.carousel-control i {
+    color: #3498db; /* Cor azul para o ícone */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-control {
+        font-size: 30px; /* Reduz o tamanho do botão em telas pequenas */
+        padding: 10px; /* Ajusta o padding do botão */
+    }
+
+    .project h3 {
+        font-size: 1.5rem; /* Ajusta o tamanho do título para telas menores */
+    }
+
+    .project p {
+        font-size: 1rem; /* Ajusta o tamanho do texto da descrição */
+    }
+
+    .carousel-item {
+        padding: 1rem; /* Reduz o padding nos itens do carrossel */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-control {
+        font-size: 24px; /* Reduz ainda mais o tamanho dos botões */
+    }
+
+    .project {
+        padding: 1rem; /* Ajusta o padding do projeto */
+    }
+}
+
+/* Estilo do ícone do GitHub */
+.github-icon {
+    font-size: 40px; /* Tamanho do ícone */
+    color: #3498db; /* Cor do ícone */
+    transition: transform 0.3s, opacity 0.3s; /* Transições suaves */
+}
+
+.github-icon:hover {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+    opacity: 0.8; /* Torna o ícone menos opaco ao passar o mouse */
+}
+
+/* Para evitar que o ícone fique invisível durante o efeito hover */
+.github-icon:hover i {
+    opacity: 1; /* Mantém a opacidade do ícone ao passar o mouse */
+}
+
+
+
+
+
+/* Estilo normal da imagem */
+.project-img {
+    width: 20%; /* Tamanho da imagem normal */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+/* Classe para imagem maximizada */
+.project-img-max {
+    position: fixed; /* Torna a imagem fixa na tela */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2.5); /* Aumenta a imagem diretamente para 2.5x */
+    z-index: 10; /* Coloca acima de outros conteúdos */
+    max-width: 100%; /* Limita a largura para ocupar 100% da tela */
+    max-height: 100%; /* Limita a altura para ocupar 100% da tela */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Aumenta a sombra ao redor da imagem */
+    cursor: zoom-out; /* Alterar cursor quando imagem está maximizada */
+    opacity: 1; /* Garantir que a imagem não fique opaca */
+    filter: brightness(1.5); /* Aumenta o brilho da imagem */
+    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease; /* Transições suaves */
+}
+
+/* Retirar o efeito hover durante a maximização */
+.project-img:hover {
+    transform: none; /* Desativa o efeito hover quando a imagem está maximizada */
+}
